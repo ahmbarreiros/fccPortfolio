@@ -104,6 +104,12 @@ justify-content: space-evenly;
 align-content: center;
 }
 
+@media (max-width: 1080px) {
+ #tiles {
+  grid-template-columns: auto auto;
+ }
+}
+
 .project-tile {
  background-color: #3a3d40;
  height: 470px;
