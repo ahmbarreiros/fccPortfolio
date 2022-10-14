@@ -75,7 +75,6 @@ main {
 }
 
 #projects {
- /* width: 100%; */
  height: 100%;
  background-color: #45567d;
  padding: 80px;
@@ -116,12 +115,16 @@ align-content: center;
  height: 470px;
 }
 
+#tiles a {
+ text-decoration: none;
+}
 
 .project-tile img {
  object-fit: cover;
  width: 400px;
  height: 84%;
 }
+
 
 a .project-tile:visited {
  text-decoration: none;
@@ -141,6 +144,29 @@ a > .project-tile > h3 {
  font-family: 'Poppins', sans-serif;
  font-weight: 400;
 }
+
+.hover-effect {
+ color: var(--gray);
+ font-family: 'Poppins', sans-serif;
+}
+
+a:hover > .project-tile > h3 > .hover-effect {
+ color: darkorange;
+ transition: 250ms ;
+}
+
+/* a:hover > .project-tile > h3::before {
+ content: '< ';
+ color: darkorange;
+ transition-duration: 500ms;
+}
+
+a:hover > .project-tile > h3::after {
+ content: ' />';
+ color: darkorange;
+ transition-duration: 5s;
+} */
+
 
 #show-all {
  position: relative;
@@ -206,10 +232,13 @@ a > .project-tile > h3 {
  font-weight: 200;
  font-style: italic;
  font-size: 18px;
+ margin-bottom: 50px;
 }
 
 #contacts div {
  display: flex;
+ margin: 20px;
+ font-family: 'Poppins', sans-serif;
 }
 
 
@@ -239,3 +268,36 @@ footer p a {
  font-weight: 300;
 }
 
+#contacts {
+ display: flex;
+ position: relative;
+ width: 850px;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+#contacts div a {
+ display: flex;
+ position: relative;
+ top: 0%;
+ padding: 0;
+ text-decoration: none;
+ color: white;
+ font-size: 24px;
+ vertical-align: middle;
+}
+
+#contacts div a p {
+ vertical-align: middle;
+ font-family: 'Poppins', sans-serif;
+}
+
+#contacts i {
+ vertical-align: middle;
+}
+
+#contacts div a:hover {
+ top: 20%;
+ transition-duration: 250ms;
+}
